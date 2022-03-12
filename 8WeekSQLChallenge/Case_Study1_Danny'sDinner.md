@@ -1,8 +1,10 @@
-Case Study #1 - Danny's Diner
+# Case Study #1 - Danny's Diner
 
-1. What is the total amount each customer spent at the restaurant?
+> [Markdown style guide ref](https://www.markdownguide.org/basic-syntax/#:~:text=To%20bold%20text%2C%20add%20two,without%20spaces%20around%20the%20letters.&text=I%20just%20love%20**bold%20text**)
 
-```
+## 1. What is the total amount *each* customer spent at the restaurant?
+
+```sql
 SELECT M.CUSTOMER_ID, SUM(ME.[price]) AS AMT_SPENT
 FROM [dbo].[members] M
 LEFT OUTER JOIN [dbo].[sales] S ON S.[customer_id]=M.[customer_id]
@@ -10,8 +12,22 @@ LEFT OUTER JOIN [dbo].[menu] ME ON ME.[product_id]=S.[product_id]
 GROUP BY M.CUSTOMER_ID
 ```
 
-2. How many days has each customer visited the restaurant?
-3. What was the first item from the menu purchased by each customer?
+## 2. How many **days** has each customer visited the restaurant?
+
+```sql
+SELECT CUSTOMER_ID, COUNT(DISTINCT([order_date])) AS TOTAL_VISITS
+FROM [dbo].[sales]
+GROUP BY CUSTOMER_ID
+```
+
+
+## 3. What was the ***first item*** from the menu purchased by each customer?
+
+```sql
+
+
+```
+
 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 5. Which item was the most popular for each customer?
 6. Which item was purchased first by the customer after they became a member?
