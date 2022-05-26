@@ -1,7 +1,4 @@
-- 👋 Hi, I’m @sumachandrashekar
-- 👀 I’m interested in creating and productionalizing ML models
-- 🌱 I’m currently learning MLOps
-- 💞️ I’m looking to collaborate on deploying ML models at scale in a cloud environment.
+- 👋 Hi, I’m @sumachandrashekar. I currently work on developing data and ML infrastructure to support large scale data analysis and ML deployment.
 - 📫 How to reach me : www.linkedin.com/in/sumachandrashekar
 
 <!---
